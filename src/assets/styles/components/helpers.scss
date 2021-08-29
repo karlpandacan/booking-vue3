@@ -1,0 +1,52 @@
+.float-right {
+    position: relative;
+    float: right;
+}
+
+.float-left {
+    position: relative;
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.block {
+    width: 100%;
+}
+
+$spaceamounts: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts {
+    @each $side in $sides {
+        .m#{str-slice($side, 0, 1)}-#{$space} {
+            margin-#{$side}: #{$space}px !important;
+        }
+
+        .p#{str-slice($side, 0, 1)}-#{$space} {
+            padding-#{$side}: #{$space}px !important;
+        }
+    }
+
+    .mx-#{$space} {
+        margin-right: #{$space}px;
+        margin-left: #{$space}px;
+    }
+
+    .my-#{$space} {
+        margin-top: #{$space}px;
+        margin-bottom: #{$space}px;
+    }
+
+    .px-#{$space} {
+        padding-right: #{$space}px;
+        padding-left: #{$space}px;
+    }
+
+    .py-#{$space} {
+        padding-top: #{$space}px;
+        padding-bottom: #{$space}px;
+    }
+}

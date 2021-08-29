@@ -1,0 +1,31 @@
+@import '../colors';
+
+#login {
+    display: block;
+    box-sizing: border-box;
+    background-color: #00539c;
+    margin: 12px 12px 0px auto;
+    width: 40%;
+    padding: 24px 24px;
+    border-radius: 12px;
+}
+
+@media only screen and (max-width: 1024px) {
+    #login {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #login {
+        margin: auto;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #login {
+        margin: auto;
+        width: 100%;
+    }
+}

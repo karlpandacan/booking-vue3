@@ -1,0 +1,25 @@
+@import '../colors';
+
+.alert {
+    padding: 20px;
+    color: $accent-color;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+}
+
+.alert.error {
+    background-color: $error-color;
+}
+
+.alert.success {
+    background-color: $success-color;
+}
+
+.alert.info {
+    background-color: $info-color;
+}
+
+.alert.warning {
+    background-color: $warning-color;
+}

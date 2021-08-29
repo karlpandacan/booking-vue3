@@ -1,0 +1,17 @@
+@import 'pages/navigation.scss';
+@import 'pages/login.scss';
+@import 'components/form.scss';
+@import 'components/alert.scss';
+@import 'components/modal.scss';
+@import 'components/helpers.scss';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    margin: 0;
+}

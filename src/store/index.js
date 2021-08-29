@@ -1,24 +1,18 @@
-import { reactive } from "vue";
+import { createStore } from 'vuex'
+import createPersistedState from 'vuex-persistedstate';
+import Cookies from 'js-cookie';
 
-const state = reactive({
-    username: "",
-    token: "",
-})
+import users from './modules/users'
 
-const methods = {
-    login() {
-
-    },
-}
-
-const getters = {
-    username() {
-        return state.username;
+export default createStore({
+  modules: {
+    users
+  },
+  plugins: [createPersistedState({
+    storage: {
+      getItem: key => Cookies.get(key),
+      setItem: (key, value) => Cookies.set(key, value, { expires: 3, secure: true }),
+      removeItem: key => Cookies.remove(key)
     }
-}
-
-export default {
-    state,
-    methods,
-    getters
-}
+  })],
+})
