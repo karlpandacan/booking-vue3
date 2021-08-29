@@ -1,4 +1,4 @@
-# pokedex
+# booking-vue3
 
 ## Project setup
 ```
